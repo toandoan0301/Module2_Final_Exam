@@ -138,8 +138,19 @@ public class Menu {
         if (productManager.findIndexById(id) == -1) {
             System.out.println("Không có sản phẩm này để xoá!");
         } else {
-            productManager.delete(id);
-            System.out.println("Đã xoá!");
+            do {
+                System.out.println("Nhập 1 để xoá, 2 để bỏ qua");
+                int choice = Validate.inputChoice();
+                if (choice==1) {
+                    productManager.delete(id);
+                    System.out.println("Đã xoá!");
+                    break;
+                }else if (choice==2) {
+                    System.out.println("bỏ qua");
+                    break;
+                }else System.out.println("Nhập sai vui lòng nhập lại");
+            }while (true);
+
         }
     }
 
