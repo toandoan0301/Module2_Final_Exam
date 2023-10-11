@@ -156,7 +156,7 @@ public class Menu {
         int choice;
         do {
             System.out.println("1. Theo giá tăng dần" +
-                    "2. Theo giá giảm dần");
+                    "\n2. Theo giá giảm dần");
             choice = Validate.inputChoice();
             List<Product> list= productManager.findAll();
             if (choice == 1) {
